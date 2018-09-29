@@ -6,7 +6,7 @@
   "repository": {},
   "devDependencies": {
     "babel-preset-env": "^1",
-    "babel-register": "^6",
+    "babel-register": "^6.26.0",
     "breakpoint-sass": "^2",
     "browser-sync": "^2.6.9",
     "chroma-sass": "^1",
@@ -23,6 +23,7 @@
     "gulp-sass-lint": "^1",
     "gulp-size": "^2",
     "gulp-sourcemaps": "^1",
+    "handorgel": "^0.4.6",
     "js-yaml": "^3",
     "kss": "^3.0.0-beta.23",
     "kss-offscreen-twig": "^2.0.0-alpha.8",
@@ -30,5 +31,6 @@
     "sass-lint": "^1",
     "typey": "^1"
   },
-  "private": true
+  "private": true,
+  "dependencies": {}
 }

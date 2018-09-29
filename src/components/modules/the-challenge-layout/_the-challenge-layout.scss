@@ -1,0 +1,81 @@
+// The Challenge Layout !!!
+//
+// Everything combined in an attempt to re-create the .psd layout using CSS Grid! Woo!
+//
+//
+// Markup: the-challenge-layout.twig
+//
+// Style guide: 7
+.the-layout-container {
+    padding: 6vw;
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+
+    @include respond-to('xl') {
+        grid-template-areas: "header search" "cta cta" "main main" "accordion aside" "footer aside";
+        grid-template-columns: 1fr 325px;
+        grid-template-rows: 1fr 4fr 4fr 8fr;
+    }
+    grid-template-areas: "header header" "cta cta" "main main" "accordion accordion" "aside aside";
+}
+
+
+
+header,
+.header {
+    grid-area: header;
+}
+
+.search {
+
+    @include respond-to('xl') {
+        display: flex;
+    }
+    grid-area: search;
+    display: none;
+}
+
+.page-title {
+    grid-area: cta;
+    max-width: 100%;
+    min-height: 180px;
+
+
+    @include respond-to('xl') {
+        max-width: 60%;
+    }
+
+    h1 {
+        font-size: 1.4375rem;
+
+        @include respond-to('xl') {
+            font-size: 2.4375rem;
+        }
+    }
+}
+
+.content-box {
+    grid-area: main;
+    margin-bottom: 40px;
+}
+
+.handorgel {
+    grid-area: accordion;
+}
+
+@include respond-to('xl') {
+    .the-layout-container .handorgel {
+        max-width: 95.2%;
+    }
+}
+
+.aside-box {
+    grid-area: aside;
+    max-height: 220px;
+}
+
+.the-layout-container .aside-box__item {
+    width: 100%;
+}

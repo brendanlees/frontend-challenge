@@ -23,9 +23,24 @@ $chroma: add-colors((
   'black':                  #111,
   'blue':                   #0074cb,
   'blue-mid':               #015ea4,
+
+
+// Added some custom colours to suit the challenge psd...
+
+  'grey-soft':               #f8fbff,
+  'blue-light':              #e2eaf2,
+  'blue-dark':               #415468,
+  'blue-vivid':              #2f8ed5
+
+
+
+
 ));
 
 // The primary color scheme provides components with colors.
 // Primary colors should be defined in each component.
 $chroma: define-color-scheme('primary', 'Colors used by design components.');
 $chroma-active-scheme: 'primary';
+
+
+

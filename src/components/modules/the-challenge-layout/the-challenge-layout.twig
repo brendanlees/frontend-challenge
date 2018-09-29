@@ -1,0 +1,85 @@
+<div class="the-layout-container">
+<header class="header">
+  {% include '../logo/logo.twig' with { id: 'header' } %}
+  <button class="mobile-menu__toggle" id="mobile-menu" aria-haspopup="dialog">{{ 'Show menu' }}</button>
+  {% include '../nav/nav.twig' %}
+</header>
+  <form class="search">
+  <div class="form__item">
+    <label for="inputSearch" class="visually-hidden">Enter search terms</label>
+    <input type="search" id="inputSearch" placeholder="Search this site...">
+  </div>
+  <div class="form__actions">
+    <input type="submit" class="button--search" value="Search" />
+  </div>
+</form>
+
+<div class="page-title">
+  <h1{{ title_attributes }}>Australia’s premium Drupal strategy, 
+design & development experts</h1>
+</div>
+
+<div class="content-box">
+  <div class="content-box__item {{ modifier_class }}">
+  	<h3>Solutions</h3>
+    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. </p>
+    <button class="button button--secondary">Solutions</button>
+
+  </div>
+
+  <div class="content-box__item {{ modifier_class }}">
+  	<h3>About us</h3>
+    <p>Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor.</p>
+    <button class="button button--secondary">About us</button>
+
+  </div>
+</div>
+
+<div class="handorgel">
+  <h3 class="handorgel__header">
+    <button class="handorgel__header__button" autofocus>
+      Our approach
+    </button>
+  </h3>
+  <div class="handorgel__content" data-open>
+    <div class="handorgel__content__inner">
+      Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+    </div>
+  </div>
+  <h3 class="handorgel__header">
+    <button class="handorgel__header__button">
+      Drupal strategy
+    </button>
+  </h3>
+  <div class="handorgel__content">
+    <div class="handorgel__content__inner">
+      Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+    </div>
+  </div>
+    <h3 class="handorgel__header">
+    <button class="handorgel__header__button">
+      Styleguide driven development
+    </button>
+  </h3>
+  <div class="handorgel__content">
+    <div class="handorgel__content__inner">
+      Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+    </div>
+  </div>
+
+</div>
+
+
+<div class="aside-box">
+  <div class="aside-box__item {{ modifier_class }}">
+    <h3>Contact</h3>
+    <p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.  </p>
+    <a href="{{ path }}" title="{{ title }}"><button class="button button--secondary">Contact us</button></a>
+
+  </div>
+</div>
+
+
+
+
+</div>

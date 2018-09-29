@@ -1,0 +1,149 @@
+// Accordion
+//
+// Based on <a href="https://github.com/oncode/handorgel" target="_blank">Handorgel</a>, an Accessible W3C conform accordion written in ES6, with some flexbox bits thrown in by me :)
+//
+//
+// Markup: accordion.twig
+//
+// Style guide: 6.7
+
+
+// SVGs
+$arrow-down: url("/assets/chevron-down.svg");
+
+
+.handorgel {
+  @include typeface(base);
+  @include typeset('default');
+  display: block;
+  width: 100%;
+  max-width: 100%;
+
+  h3 {
+    color:  color(blue-dark);
+  }
+
+
+    @include respond-to(xl) {
+  max-width: 70.2%;
+  }
+
+  // Accordion Header
+
+  &__header {
+    display: block;
+    margin: 0;
+    margin-bottom: $spacing-m;
+    color:  color(blue-dark);
+
+}
+
+  &__header--open {
+  margin-bottom: 0;
+}
+
+  &__header--open &__header__button {
+    background-color: color(blue-light);
+}
+
+  &__header--notransition &__header__button {
+    transition: none;
+}
+
+
+&__header__button {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  padding: 20px 24px;
+  border: none;
+  border-top: $border-style color(blue-light);
+  margin: 0;
+  background-color: color(blue-light);
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color:  color(blue-dark);
+  font-weight:  bold;
+  text-align: left;
+
+}
+
+&__header__button::after {
+  content: ' ';
+  margin-left: auto;
+  background: $arrow-down center no-repeat;
+  background-size: contain;
+  height:23px;
+  width:22px;
+  display:block;
+  filter: contrast(0.5) sepia(50%) hue-rotate(180deg) brightness(1.1) saturate(1);
+}
+
+&__header--open &__header__button::after {
+
+  content: ' ';
+  margin-left: auto;
+  background: $arrow-down center no-repeat;
+  background-size: contain;
+  transform: rotate(180deg);
+  height:23px;
+  width:22px;
+  filter: contrast(0.5) sepia(50%) hue-rotate(180deg) brightness(1.1) saturate(1);
+}
+
+
+// Accordion Content
+
+&__content {
+  display: none;
+  overflow: hidden;
+  height: 0;
+  border: $border-style color(blue-light);
+  background-color: color(grey-soft);
+  transition: height 0.1s ease 0.1s;
+  margin-bottom: 40px;
+}
+
+&__content--open {
+  display: block;
+  transition: height 0.2s ease;
+}
+
+&__content--opened {
+  overflow: visible;
+}
+
+&__content--notransition {
+  transition: none;
+}
+
+&__content__inner {
+  padding: 20px 24px;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+&__content--opened &__content__inner {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

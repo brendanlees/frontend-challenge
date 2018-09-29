@@ -1,0 +1,15 @@
+// Page title
+//
+// The big page CTA or page title area
+// 
+//
+//
+// Markup: page-title.twig
+//
+// Style guide: 6.8
+
+.page-title h1 {
+    @include typeface(base);
+    @include typeset(x-large, normal);
+    color: color(blue-vivid);
+}

@@ -1,0 +1,75 @@
+// Search Field
+//
+// The search field that appears in the header (hidden on smaller viewport).
+// 
+//
+//
+// Markup: search.twig
+//
+// Style guide: 5.1
+//
+// I would guess that these input related rules probably go elsewhere but given this is the only field on the 
+// challenge psd thought I'd put them here?
+//
+// SVG Links
+$search: url('/assets/search.svg');
+$search-hover: url('/assets/search-is-hover.svg');
+
+.search {
+    display: flex;
+}
+
+[type="search"] {
+    @include typeface(base);
+    @include typeset(default);
+    color: color(black);
+    background-color: color(grey-xxlight);
+    border: 1px solid color(grey-xxlight);
+    border-radius: 4px;
+    ;
+    max-width: 100%;
+    min-width: 280px;
+    padding: 0 .88889rem 0 .44444rem;
+    height: 2.66667rem;
+    text-indent: .44444rem;
+    cursor: text;
+}
+
+input {
+
+::placeholder {
+    @include typeface(base);
+    @include typeset(default);
+    color: color(black);
+    opacity: 1;
+}
+}
+
+.form__actions {
+    background-color: color(grey-xxlight);
+    height: 2.66667rem;
+}
+
+.button--search {
+    display: inline-block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 2.66667rem;
+    width: 2.66667rem;
+    line-height: 2.44444rem;
+    background-color: color(grey-xxlight);
+    background: $search center no-repeat;
+    border: 0;
+    color: color(black);
+    padding: 0;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: all .2s ease-in-out;
+}
+
+.button--search:hover {
+    background: $search-hover center no-repeat;
+    background-color: color(blue-vivid);
+    transition: all .2s ease-in-out;
+}

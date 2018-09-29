@@ -23,6 +23,7 @@ $typestyles: (
   default:       16px normal,
   small:         14px,
   large:         18px,
+  x-large:       39px normal,
 );
 
 // Font families
@@ -31,3 +32,4 @@ $font-base:      'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $typefaces: (
   base:          $font-base,
 );
+
