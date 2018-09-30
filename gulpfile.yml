@@ -22,7 +22,7 @@ styleguide:
   jsFiles:
     - https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js
     - https://unpkg.com/handorgel@0.4/lib/js/umd/handorgel.js
-    - https://github.com/brendanlees/frontend-challenge/tree/master/design/bl_assets/js
+    - https://brendanlees.me/pnx/accordion.js
 
 autoprefixer:
   browsers:
